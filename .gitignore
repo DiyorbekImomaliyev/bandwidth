@@ -1,0 +1,19 @@
+# Python / tooling
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Private: secrets, your real config, local state (examples are committed instead)
+.env
+private/
+data/
+vault/
+config/sources.yaml
+config/profile.yaml
+config/planner.toml
+config/overrides.yaml
+config/ai.yaml
+config/apply.yaml

@@ -1,0 +1,43 @@
+{
+ "jobs": [
+  {
+   "absolute_url": "https://job-boards.greenhouse.io/anthropic/jobs/5183044008",
+   "company_name": "Anthropic",
+   "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;&lt;strong&gt;About Anthropic&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Applications are now open for our January cohort - &lt;a href=&quot;https://bit.ly/afpsafety&quot;&gt;apply here by October 30.&lt;/a&gt;&lt;/p&gt;\n&lt;h1&gt;&lt;strong&gt;Anthropic Fellows Program overview&lt;/strong&gt;&lt;/h1&gt;\n&lt;p&gt;The Anthropic Fellows Program is designed to foster AI research and engineering talent. We provide funding and mentorship to promising technical talent - regardless of previous experience.&lt;/p&gt;\n&lt;p&gt;Fellows will primarily use external infrastructure (e.g. open-source models, public APIs) to work on an empirical project aligned with our research priorities, with the goal of producing a &lt;strong&gt;public output&lt;/strong&gt; (e.g. a paper submission). In one of our earlier cohorts, over 80% of fellows produced papers.&amp;nbsp;We run multiple cohorts of Fellows each year and review applications on a rolling basis.&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;What to expect&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;4 months of full-time research&amp;nbsp;&lt;/li&gt;\n&lt;li&",
+   "first_published": "2026-04-09T20:28:23-04:00",
+   "id": 5183044008,
+   "location": {
+    "name": "London, UK; Ontario, CAN; Remote-Friendly, United States; San Francisco, CA"
+   },
+   "title": "Anthropic Fellows Program, AI Safety & Security",
+   "updated_at": "2026-10-21T03:03:14-04:00"
+  },
+  {
+   "absolute_url": "https://job-boards.greenhouse.io/anthropic/jobs/5398438008",
+   "company_name": "Anthropic",
+   "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;&lt;strong&gt;About Anthropic&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.&lt;/p&gt;&lt;/div&gt;&lt;h2&gt;&lt;strong&gt;About the role&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;As a Deployment Manager on the Beneficial Deployments team, you will guide customers from a signed contract into a live, governed, and adopted deployment so that customers achieve tangible impact rather than simply incremental improvement with Claude. You&#39;ll guide organizations from contract signature to production deployment across Claude for Enterprise, Claude Code, and our API products, fundamentally changing how they work and deliver on their missions.&lt;/p&gt;\n&lt;p&gt;You&#39;ll be the technical hands that switch Claude on. Before any organization can drive adoption, before any champion can ship their first workflow, someone has to connect Claude to the customer&#39;s identity provider, get the right people provisioned into the right workspaces, and walk their CISO through how it all comes together. That&#39;s your work. You turn &quot;we&#39;ve signed the contract&quot; into &quot;our employees can log in, with the right access, under the ",
+   "first_published": "2026-09-11T10:35:46-04:00",
+   "id": 5398438008,
+   "location": {
+    "name": "San Francisco, CA | New York City, NY"
+   },
+   "title": "Activation Manager, Beneficial Deployments",
+   "updated_at": "2026-10-13T13:20:04-04:00"
+  },
+  {
+   "absolute_url": "https://job-boards.greenhouse.io/anthropic/jobs/5456619008",
+   "company_name": "Anthropic",
+   "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;&lt;strong&gt;About Anthropic&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.&lt;/p&gt;&lt;/div&gt;&lt;h2&gt;&lt;strong&gt;About the role&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;We are looking for a Senior Manager, 3P Revenue Accounting &amp;amp; Reporting to join our Accounting team. You will own revenue recognition, month-end close and reporting for Claude sold through our cloud service provider (CSP) channels: AWS Bedrock, Google Cloud Vertex AI and Microsoft Azure Marketplace. These channels are among the fastest-growing revenue streams at the company. They run on consumption-based, partner-reported data that changes every month.&lt;/p&gt;\n&lt;p&gt;You will be the accounting point of contact for the finance and partner teams at AWS, Google and Microsoft. Internally, you will partner with Finance, FAB, Engineering and business teams to turn partner billing feeds into accurate, auditable revenue. You will also lead the automation of a close that is still heavily manual. If you want to build the financial infrastructure behind a fast-growing AI company, come join us in our mission to build safe, beneficial AI.&lt;/p&gt;\n&lt;",
+   "first_published": "2026-10-19T11:17:24-04:00",
+   "id": 5456619008,
+   "location": {
+    "name": "San Francisco, CA | Seattle, WA"
+   },
+   "title": "3P Revenue Accounting & Reporting",
+   "updated_at": "2026-10-19T11:17:24-04:00"
+  }
+ ],
+ "meta": {
+  "total": 3
+ }
+}

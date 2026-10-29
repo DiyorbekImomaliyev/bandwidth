@@ -1,0 +1,5 @@
+# Saved answers to application questions, by the question's exact text (SPEC VLT-4).
+# The bot adds to this file when you reply /answer <n> <text> to a checklist.
+# Questions about visas, work permits, demographics or salary are filled ONLY from answers here.
+- question: Are you open to relocation for this role?
+  answer: "Yes"

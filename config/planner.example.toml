@@ -1,0 +1,165 @@
+# Study Planner settings. Copy to config/planner.toml and edit.
+# Times are local (timezone below). Days: sun mon tue wed thu fri sat.
+
+timezone = "Asia/Qatar"   # set yours, e.g. "Europe/London"
+school_location = "CAMPUS"   # feed events at this LOCATION are university-wide dates
+send_at = "05:00"          # daily message
+quiet_from = "22:00"       # no alerts from here ...
+quiet_until = "05:00"      # ... until here
+weekly_summary = "sat 20:00"
+start_date = 2026-10-23    # day 1; progress counts from here
+classes_end = 2026-12-03   # no classes after this date
+exam_mode = [2026-12-03, 2026-12-12]
+
+# Short names you can type in messages ("os midterm nov 5").
+[aliases]
+hist = "hist1001"
+os = "comp2201"
+ml = "data3201"
+dsa = "comp3104"
+
+[[class]]
+course = "hist1001"
+kind = "lecture"
+day = "sun"
+time = "08:00-10:00"
+room = "online"
+
+[[class]]
+course = "comp2201"
+kind = "lecture"
+day = "sun"
+time = "12:00-14:00"
+room = "01.1.06"
+
+[[class]]
+course = "data3201"
+kind = "lecture"
+day = "mon"
+time = "10:00-12:00"
+room = "10.1.17"
+
+[[class]]
+course = "comp3104"
+kind = "lecture"
+day = "mon"
+time = "14:00-16:00"
+room = "01.2.08"
+
+[[class]]
+course = "data3201"
+kind = "lab"
+day = "wed"
+time = "10:00-13:00"
+room = "10.1.17"
+
+[[class]]
+course = "comp2201"
+kind = "lab"
+day = "thu"
+time = "08:00-11:00"
+room = "10.1.03"
+
+[[class]]
+course = "hist1001"
+kind = "lecture"
+day = "thu"
+time = "11:00-12:00"
+room = "10.1.30"
+
+[[class]]
+course = "comp3104"
+kind = "lab"
+day = "thu"
+time = "14:00-17:00"
+room = "10.2.18"
+
+[[exam]]
+course = "comp3104"
+date = 2026-12-08
+time = "08:00-10:00"
+room = "10.2.01"
+
+[[exam]]
+course = "comp2201"
+date = 2026-12-09
+time = "11:00-13:00"
+room = "10.2.26"
+
+[[exam]]
+course = "data3201"
+date = 2026-12-12
+time = "08:00-10:00"
+room = "10.1.13"
+
+# Daily routine around the classes. One block per line: "HH:MM-HH:MM kind task".
+# kind: focus or break. Focus tasks: leetcode, learn, uni, push (push rides on a learn block).
+# The same anchors every day: leetcode 05:15, family dinner 18:00, sleep 22:00.
+[routine]
+sun = [
+  "05:15-07:15 focus leetcode",
+  "10:00-11:30 focus learn",
+  "14:30-15:30 focus uni",
+  "16:00-18:00 focus learn",
+  "18:00-19:30 break family dinner",
+  "19:30-21:30 focus learn push",
+]
+mon = [
+  "05:15-07:15 focus leetcode",
+  "07:45-09:15 focus learn",
+  "12:30-13:30 focus uni",
+  "16:30-18:00 focus learn",
+  "18:00-19:30 break family dinner",
+  "19:30-21:30 focus learn push",
+]
+tue = [
+  "05:15-07:15 focus leetcode",
+  "08:00-11:00 focus learn",
+  "11:00-12:00 focus uni",
+  "13:00-16:00 focus learn",
+  "16:00-17:00 break exercise",
+  "17:00-18:00 focus learn",
+  "18:00-19:30 break family dinner",
+  "19:30-21:00 focus learn push",
+]
+wed = [
+  "05:15-07:15 focus leetcode",
+  "07:45-09:15 focus learn",
+  "13:30-14:30 focus uni",
+  "15:00-18:00 focus learn",
+  "18:00-19:30 break family dinner",
+  "19:30-21:00 focus learn push",
+]
+thu = [
+  "05:15-07:15 focus leetcode",
+  "12:30-13:30 focus uni",
+  "18:00-19:30 break family dinner",
+  "19:30-21:30 focus learn push",
+]
+fri = [
+  "05:15-07:15 focus leetcode",
+  "08:00-11:00 focus learn",
+  "11:00-12:00 focus uni",
+  "12:00-14:00 break lunch + rest",
+  "14:00-17:00 focus learn",
+  "18:00-19:30 break family dinner",
+  "19:30-21:00 focus learn push",
+]
+sat = [
+  "05:15-07:15 focus leetcode",
+  "08:00-11:00 focus learn",
+  "11:00-12:00 focus uni",
+  "13:00-16:00 focus learn",
+  "18:00-19:30 break family dinner",
+  "20:00-21:00 focus learn push",
+]
+# Every day in exam mode. Revision goes first; leetcode and push stay short.
+# On an exam day the exam is added and blocks that overlap it are dropped.
+exam = [
+  "05:15-06:15 focus leetcode",
+  "07:00-10:00 focus uni",
+  "10:30-12:30 focus uni",
+  "13:30-14:30 focus learn push",
+  "18:00-19:30 break family dinner",
+  "19:30-21:00 focus uni",
+]

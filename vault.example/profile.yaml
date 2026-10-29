@@ -1,0 +1,27 @@
+# What application forms ask for (SPEC §9). Copy this folder to vault/ (git-ignored), then:
+#   chmod 700 vault && bw vault
+# Only code and the model on your Mac read it. Never put passwords here.
+
+first_name: Ada
+last_name: Example
+preferred_name:              # optional
+email: ada@example.org
+phone: "+44 7700 900123"     # with the country code, in quotes
+phone_country: United Kingdom
+country: United Kingdom      # where you live now
+city: London
+citizenship:                 # optional: nationality questions; right to work is Yes for here and your citizenship
+needs_sponsorship:           # optional: true or false; answers "Will you require visa sponsorship?"
+
+links:
+  linkedin: https://www.linkedin.com/in/ada-example
+  github: https://github.com/ada-example
+  website:
+
+education:
+  school: Example University
+  degree: Bachelor of Science
+  major: Computer Science
+  start:                     # year-month the degree began, e.g. 2023-09
+  graduation: 2027-06        # year-month
+  gpa:                       # optional; leave empty to never fill it

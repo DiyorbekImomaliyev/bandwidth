@@ -1,0 +1,10 @@
+# Applying (SPEC §11). Copy to config/apply.yaml to change; every key is optional.
+
+# Who drafts essays and cover letters:
+#   cloud_anonymised  your facts go to a free cloud model with your name, contacts, school and
+#                     private terms replaced by placeholders; details are put back on this Mac
+#   local             only the model on this Mac (slower, and weaker at keeping facts straight)
+drafting: cloud_anonymised
+
+# At most this many applications submitted per day (Fast apply).
+daily_cap: 5

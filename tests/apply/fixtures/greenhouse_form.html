@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Apply</title>
+<style>.select__menu{border:1px solid #999}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden}</style>
+</head><body>
+<!-- A small copy of job-boards.greenhouse.io's form markup (seen 28 Oct 2026): plain inputs keyed by
+     the API's field names, comboboxes instead of <select>, a hidden file input, a submit button. -->
+<form id="application-form" onsubmit="window.submitted = true; return false;">
+  <label for="first_name">First Name*</label><input type="text" id="first_name" aria-required="true">
+  <label for="last_name">Last Name*</label><input type="text" id="last_name" aria-required="true">
+  <label for="email">Email*</label><input type="text" id="email" aria-required="true">
+  <label for="phone">Phone*</label><input type="tel" id="phone" aria-required="true">
+
+  <div class="select"><label for="country">Country*</label>
+    <div class="select__control"><div class="select__value-container"></div>
+      <input type="text" id="country" role="combobox" aria-required="true" class="select__input"></div></div>
+
+  <label for="resume">Resume/CV*</label><input type="file" id="resume" class="visually-hidden">
+  <div id="resume-name"></div>
+
+  <div class="select"><label for="school--0">School*</label>
+    <div class="select__control"><div class="select__value-container"></div>
+      <input type="text" id="school--0" role="combobox" aria-required="true" class="select__input"></div></div>
+
+  <label for="question_1">LinkedIn Profile</label><input type="text" id="question_1">
+
+  <div class="select"><label for="question_2">Are you open to relocation for this role?*</label>
+    <div class="select__control"><div class="select__value-container"></div>
+      <input type="text" id="question_2" role="combobox" aria-required="true" class="select__input"></div></div>
+
+  <label for="question_3">Why Acme?*</label><textarea id="question_3" aria-required="true"></textarea>
+
+  <label for="question_9">How did you hear about us?*</label><input type="text" id="question_9" aria-required="true">
+
+  <label for="question_hidden">Hidden</label><input type="text" id="question_hidden" style="display:none">
+
+  <div style="display:none" role="listbox"><div role="option">United Kingdom+44</div><div role="option">Qatar+974</div></div>
+
+  <fieldset class="checkbox" id="question_7[]" aria-required="true"><legend>Please acknowledge our Privacy Policy*</legend>
+    <input type="checkbox" id="question_7[]_1" name="question_7[]" value="1" required><label for="question_7[]_1">Acknowledge/Confirm</label>
+  </fieldset>
+
+  <button type="submit" id="submit">Submit application</button>
+</form>
+<script>
+// Seen live: the country picker shows dial codes, and a hidden phone-country list also has role=option.
+const OPTIONS = {country: ["United Kingdom +44", "United States +1", "Qatar +974"], question_2: ["Yes", "No"],
+                 "school--0": ["Christian Brothers University", "Other"]};
+for (const [id, options] of Object.entries(OPTIONS)) {
+  const input = document.getElementById(id);
+  const control = input.closest(".select__control");
+  const shown = control.querySelector(".select__value-container");
+  const menu = () => {
+    control.querySelector(".select__menu")?.remove();
+    const m = document.createElement("div");
+    m.className = "select__menu";
+    m.setAttribute("role", "listbox");
+    for (const o of options.filter(o => o.toLowerCase().includes(input.value.toLowerCase()))) {
+      const d = document.createElement("div");
+      d.setAttribute("role", "option");
+      d.textContent = o;
+      d.onclick = () => { shown.innerHTML = `<div class="select__single-value">${o}</div>`; input.value = ""; m.remove(); };
+      m.appendChild(d);
+    }
+    control.appendChild(m);
+  };
+  input.addEventListener("focus", menu);
+  input.addEventListener("input", menu);
+}
+// Seen live: after a file is chosen, the input is removed and the file name shown instead.
+document.getElementById("resume").addEventListener("change", e => {
+  document.getElementById("resume-name").textContent = e.target.files[0]?.name || "";
+  e.target.remove();
+});
+</script>
+</body></html>

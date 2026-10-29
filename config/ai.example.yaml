@@ -1,0 +1,48 @@
+# AI providers, in order of preference (SPEC §4). Copy to config/ai.yaml and edit.
+#
+# Private tasks (your messages, profile, deadlines, essays) only ever go to a provider whose
+# base_url is this machine. Public tasks (postings, ranking) try the cloud providers in order and
+# fall back to the local model. A provider whose key is missing from .env is skipped.
+#
+# Keys never go in this file: key_env names the variable in .env that holds the key.
+# Model names change often; check each provider's console and `bw doctor` after editing.
+
+# Words that must never appear in a call to a cloud provider: your name, email, phone,
+# citizenship... A match blocks the call (it is a bug in how the prompt was built).
+private_terms: [Your Name, you@example.com, "+1 555 0100"]
+
+providers:
+  - name: cerebras          # free tier; its terms do not let it train on your content
+    kind: openai
+    base_url: https://api.cerebras.ai/v1
+    model: gpt-oss-120b
+    key_env: CEREBRAS_API_KEY
+    no_think: {reasoning_effort: low}
+
+  - name: groq              # free tier
+    kind: openai
+    base_url: https://api.groq.com/openai/v1
+    model: openai/gpt-oss-120b
+    key_env: GROQ_API_KEY
+    no_think: {reasoning_effort: low}
+
+  - name: openrouter        # free models (":free"); many models behind one key
+    kind: openai
+    base_url: https://openrouter.ai/api/v1
+    model: nvidia/nemotron-3.5-super-vl:free   # gpt-oss-120b:free was withdrawn (Oct 2026)
+    key_env: OPENROUTER_API_KEY
+    no_think: {reasoning: {effort: low}}       # with no reasoning at all it misreads eligibility rules
+    token_budget: 16000                         # it thinks ~1,000 tokens per posting before answering
+
+  - name: gemini            # free tier may use what you send: public data only
+    kind: openai
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    model: gemini-2.5-flash
+    key_env: GEMINI_API_KEY
+    no_think: {reasoning_effort: none}   # else 2.5 models spend the budget thinking
+
+  - name: local             # Ollama on this Mac: private tasks, and the fallback for public ones
+    kind: ollama
+    base_url: http://localhost:11434
+    model: qwen3:8b
+    num_ctx: 8192
